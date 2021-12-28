@@ -1,0 +1,14 @@
+{
+  "name": "barowatt",
+  "version": "1.0.0",
+  "description": "Back-end barowatt data collector and angular UI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "barowatt"
+  ],
+  "author": "David McCarty",
+  "license": "ISC"
+}
