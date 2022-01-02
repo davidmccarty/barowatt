@@ -4,11 +4,27 @@
   "description": "Back-end barowatt data collector and angular UI",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "tsc --noEmit && eslint . --ext js,ts,json --quiet --fix"
   },
   "keywords": [
     "barowatt"
   ],
   "author": "David McCarty",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "fast-xml-parser": "^4.0.0-beta.8",
+    "log4js": "^6.3.0",
+    "mongodb": "^4.2.2",
+    "serialport": "^9.2.8"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "eslint": "^8.5.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "prettier-eslint": "^13.0.0"
+  }
 }
