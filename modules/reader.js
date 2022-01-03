@@ -32,10 +32,14 @@ module.exports = function () {
     });
     port.on('data', function (data) {
       let xml = new TextDecoder().decode(data);
-      let json = parser.parse(xml);
-      if (json.msg) {
-        logger.debug('Read: ', json);
-        mongo.writeInstant(json);
+      try {
+        let json = parser.parse(xml);
+        if (json.msg) {
+          logger.debug('Read: ', json);
+          mongo.writeInstant(json);
+        }
+      } catch (err) {
+        logger.warn('Read error: ', err.message);
       }
     });
   };
